@@ -4,6 +4,7 @@ import Utilities.GWD;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -33,6 +34,11 @@ public class ParentPage {
         JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
+    public void JSClick(WebElement element){
+        JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
+        wait.until(ExpectedConditions.visibilityOf(element));
+        js.executeScript("arguments[0].click();", element);
+    }
 
     public void verifyContainsText(WebElement element, String value){
         wait.until(ExpectedConditions.textToBePresentInElement(element,value));
@@ -40,6 +46,12 @@ public class ParentPage {
 
         new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
         //sayfaya ESC tuşu gönderildi
+    }
+    public void hoverOver(WebElement element){
+        Actions aksiyonDriver=new Actions(GWD.getDriver());
+        wait.until(ExpectedConditions.visibilityOf(element));
+        Action aksiyon=aksiyonDriver.moveToElement(element).build();
+        aksiyon.perform();
     }
 
 }

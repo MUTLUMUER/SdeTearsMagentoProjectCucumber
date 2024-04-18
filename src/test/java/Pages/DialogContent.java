@@ -68,6 +68,20 @@ public class DialogContent extends ParentPage {
     public WebElement inputBilling;
     @FindBy(xpath = "//input[@id='primary_shipping']")
     public WebElement inputShipping;
+    @FindBy(xpath = "//span[text()='Women']")
+    public WebElement TabMenuWomen;
+    @FindBy(xpath = "//a[@id='ui-id-9']")
+    public WebElement TabMenuTops;
+    @FindBy(xpath = "(//span[text()='Bottoms'])[1]")
+    public WebElement TabMenuBottom;
+    @FindBy(xpath = "//span[text()='Men']")
+    public WebElement TabMenuMen;
+    @FindBy(xpath = "//a[@id='ui-id-17']")
+    public WebElement TabMenuMenTops;
+    @FindBy(xpath = "(//span[text()='Bottoms'])[2]")
+    public WebElement TabMenuBottomMen;
+
+
 
   /*  public void deleteItem(String deleteName) {
         mySendKeys(searchInput, deleteName);
@@ -104,6 +118,7 @@ public class DialogContent extends ParentPage {
             case "inputZip" : return this.inputZip;
             case "saveAddressButton" : return this.saveAddressButton;
             case "buttonAddNewAddress" : return this.buttonAddNewAddress;
+            case "TabMenuTops" : return this.TabMenuTops;
 
 
         }
