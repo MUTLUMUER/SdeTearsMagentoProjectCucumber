@@ -42,6 +42,32 @@ public class DialogContent extends ParentPage {
     public WebElement requiredContent;
     @FindBy(xpath = "//div[text()='The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.']")
     public WebElement invalidEmail;
+    @FindBy(xpath = "(//button[@class='action switch'])[1]")
+    public WebElement actionSwitchButton;
+    @FindBy(xpath = "(//a[text()='My Account'])[1]")
+    public WebElement MyAccount;
+    @FindBy(xpath = "//span[text()='Manage Addresses']")
+    public WebElement ManageAddresses;
+    @FindBy(xpath = "//input[@id='telephone']")
+    public WebElement inputPhone;
+    @FindBy(xpath = "//input[@id='street_1']")
+    public WebElement inputStreet;
+    @FindBy(xpath = "//input[@id='city']")
+    public WebElement inputCity;
+    @FindBy(xpath = "//input[@id='zip']")
+    public WebElement inputZip;
+    @FindBy(xpath = "//select[@id='region_id']")
+    public WebElement selectState;
+    @FindBy(xpath = "//select[@id='country']")
+    public WebElement selectCountry;
+    @FindBy(xpath = "//button[@title='Save Address']")
+    public WebElement saveAddressButton;
+    @FindBy(xpath = "//button[@title='Add New Address']")
+    public WebElement buttonAddNewAddress;
+    @FindBy(xpath = "//input[@id='primary_billing']")
+    public WebElement inputBilling;
+    @FindBy(xpath = "//input[@id='primary_shipping']")
+    public WebElement inputShipping;
 
   /*  public void deleteItem(String deleteName) {
         mySendKeys(searchInput, deleteName);
@@ -69,6 +95,15 @@ public class DialogContent extends ParentPage {
             case "loginEmail" : return this.loginEmail;
             case "loginPass" : return this.loginPass;
             case "signInButton" : return this.signInButton;
+            case "actionSwitchButton" : return this.actionSwitchButton;
+            case "MyAccount" : return this.MyAccount;
+            case "ManageAddresses" : return this.ManageAddresses;
+            case "inputPhone" : return this.inputPhone;
+            case "inputStreet" : return this.inputStreet;
+            case "inputCity" : return this.inputCity;
+            case "inputZip" : return this.inputZip;
+            case "saveAddressButton" : return this.saveAddressButton;
+            case "buttonAddNewAddress" : return this.buttonAddNewAddress;
 
 
         }
