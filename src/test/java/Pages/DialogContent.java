@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class DialogContent extends ParentPage {
 
     public DialogContent() {
@@ -80,6 +82,60 @@ public class DialogContent extends ParentPage {
     public WebElement TabMenuMenTops;
     @FindBy(xpath = "(//span[text()='Bottoms'])[2]")
     public WebElement TabMenuBottomMen;
+    @FindBy(xpath = "//a[@class='product-item-link']")
+    public List<WebElement> productsAddToCart;
+    @FindBy(xpath = "//span[text()='Add to Cart']")
+    public WebElement addToCartButton;
+    @FindBy(xpath = "//div[@class='swatch-option color']")
+    public List<WebElement>swatchColor;
+    @FindBy(xpath = "//div[@class='swatch-option text']") //div[@data-ui-id='message-success']
+    public List<WebElement>swatchOptionText;
+    @FindBy(xpath = "//a[text()='shopping cart']")
+    public WebElement dataBindText;
+    @FindBy(xpath = "//*[contains(text(),'You added')]")
+    public WebElement dataBindText2;
+    @FindBy(xpath = "//a[@class='action showcart']")
+    public WebElement shoppingCart;
+    @FindBy(xpath = "//a[@title='Remove item']")
+    public List<WebElement> deleteButton;
+    @FindBy(xpath = "(//button[@type='button'])[8]")
+    public WebElement deleteOK;
+    @FindBy(xpath = "(//input[@type='number'])[1]")
+    public WebElement inputQuantity;
+    @FindBy(xpath = "//button[@title='Update']")
+    public WebElement ButtonUpdate;
+    @FindBy(xpath = "(//div[@id='option-label-size-143-item-168'])[3]")
+    public WebElement sizeMedium;
+    @FindBy(xpath = "(//div[@id='option-label-color-93-item-52'])[1]")
+    public WebElement itemColor;
+    @FindBy(xpath = "(//button[@title='Add to Cart'])[3]")
+    public WebElement itemAddToCart;
+    @FindBy(id = "top-cart-btn-checkout")
+    public WebElement CheckOutButton;
+    @FindBy(xpath = "(//span[text()='Ship Here'])[1]")
+    public WebElement shippingAddress;
+    @FindBy (xpath = "(//input[@type='radio'])[2]")
+    public WebElement totalPrice;
+    @FindBy(xpath = "//span[text()='Next']")
+    public WebElement nextButton;
+    @FindBy(id = "billing-address-same-as-shipping-checkmo")
+    public WebElement billingCheckBox;
+    @FindBy(xpath = "//button[@title='Place Order']")
+    public WebElement placeOrder;
+    @FindBy(xpath = "//span[text()='Thank you for your purchase!']")
+    public WebElement SuccessMessagge;
+    @FindBy(xpath = "//strong[contains(text(),'000')]")
+    public WebElement shippingNumber;
+    @FindBy(xpath = "//span[text()='Continue Shopping']")
+    public WebElement continueShopping;
+    @FindBy(xpath = "//input[@id='search']")
+    public WebElement searchBox;
+    @FindBy(xpath = "//span[@class='base']")
+    public WebElement confirmingId;
+    @FindBy(xpath = "//div[contains(text(),'Your search returned no results.')]")
+    public WebElement invalidTextMessage;
+
+
 
 
 
@@ -119,6 +175,17 @@ public class DialogContent extends ParentPage {
             case "saveAddressButton" : return this.saveAddressButton;
             case "buttonAddNewAddress" : return this.buttonAddNewAddress;
             case "TabMenuTops" : return this.TabMenuTops;
+            case "addToCartButton" : return this.addToCartButton;
+            case "shoppingCart" : return this.shoppingCart;
+            case "itemAddToCart" : return this.itemAddToCart;
+            case "CheckOutButton" : return this.CheckOutButton;
+            case "shippingAddress" : return this.shippingAddress;
+            case "totalPrice" : return this.totalPrice;
+            case "nextButton" : return this.nextButton;
+            case "billingCheckBox" : return this.billingCheckBox;
+            case "placeOrder" : return this.placeOrder;
+            case "continueShopping" : return this.continueShopping;
+
 
 
         }

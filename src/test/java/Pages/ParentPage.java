@@ -53,5 +53,8 @@ public class ParentPage {
         Action aksiyon=aksiyonDriver.moveToElement(element).build();
         aksiyon.perform();
     }
+    public static int randomGenerator(int max){
+        return (int)(Math.random()*max);
+    }
 
 }

@@ -3,6 +3,7 @@ Feature: Register functionality
   Scenario Outline: Register a new user
     Given Navigate to Magento Commerce
     And Click on the element in dialouge
+
       | createAccount |
     When Enter user credentials details
       | firstName        | <firstName>        |
