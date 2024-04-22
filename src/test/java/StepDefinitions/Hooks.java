@@ -28,7 +28,7 @@ public class Hooks {
 //            senaryo.attach(hafizadakiHali, "image/png", "screenshot name");
         }
 
-        GWD.quitDriver();
+      //  GWD.quitDriver();
     }
 
 

@@ -134,6 +134,20 @@ public class DialogContent extends ParentPage {
     public WebElement confirmingId;
     @FindBy(xpath = "//div[contains(text(),'Your search returned no results.')]")
     public WebElement invalidTextMessage;
+    @FindBy(xpath = "(//span[text()='Add to Wish List'])[1]")
+    public WebElement addToWishList;
+    @FindBy(xpath = "(//a[@title='Argus All-Weather Tank'])[2]")
+    public WebElement chosenItem;
+    @FindBy(xpath = "//*[contains(text(),'added to your Wish List.')]")
+    public WebElement wishListText;
+    @FindBy(xpath = "//a[text()='My Wish List']")
+    public WebElement wishListButton;
+    @FindBy(xpath = "(//a[@title='Argus All-Weather Tank'])[3]")
+    public WebElement itemHoverOver;
+    @FindBy(xpath = "//a[@title='Remove Item']")
+    public WebElement removingFromWishList;
+    @FindBy(xpath = "//span[text()='You have no items in your wish list.']")
+    public WebElement wishListDeletingText;
 
 
 
@@ -185,6 +199,10 @@ public class DialogContent extends ParentPage {
             case "billingCheckBox" : return this.billingCheckBox;
             case "placeOrder" : return this.placeOrder;
             case "continueShopping" : return this.continueShopping;
+            case "addToWishList" : return this.addToWishList;
+            case "chosenItem" : return this.chosenItem;
+            case "wishListButton" : return this.wishListButton;
+            case "removingFromWishList" : return this.removingFromWishList;
 
 
 
